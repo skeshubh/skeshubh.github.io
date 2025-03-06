@@ -1,4 +1,4 @@
-# Robotics Engineer
+Robotics Engineer
 
 ### Education
 - Robotics & Automation Engineering, MS
