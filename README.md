@@ -1,2 +1,5 @@
-# skeshubh.github.io
-Personal portfolio for all the projects and achievements
+# Robotics Engineer
+
+### Education
+- Robotics & Automation Engineering, MS
+- Computer Science & Engineering, BE
