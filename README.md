@@ -1,5 +1,4 @@
-Robotics Engineer
+# Personal Portfolio
 
-### Education
-- Robotics & Automation Engineering, MS
-- Computer Science & Engineering, BE
+This repo is for hosting my portfolio to better show my experience and skills.
+Hope you get a better understanding of me :)
