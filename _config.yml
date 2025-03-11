@@ -3,4 +3,5 @@ logo: /assets/profile.jpeg
 description: Result-oriented Entry Level Robotics Engineer with a strong focus on computer vision, robotics, and automation technologies.
 show_downloads: false
 theme: jekyll-theme-minimal
+markdown: kramdown
 usemathjax: true
