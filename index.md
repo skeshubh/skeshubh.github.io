@@ -2,11 +2,13 @@
 *   **MS in Robotics & Automation Engineering**, _WPI_
 *   **BE in Computer Science & Engineering**, _SRCOEM_
 
+
 # Skills
 * **Programming Languages:** Python, C++, C#, JAVA, C, RTOS, Embedded Linux, Formware Development, JavaScript, SQL
 * **Frameworks & Technologies:** PyTorch, TensorFlow, OpenCV, ROS2, ROS, Gazebo, MATLAB, Unity, API, Linux, GIT, AWS, EAGLE, SolidWorks
 * **Microcontrollers & Sensors:** ESP32, Arduino, Raspberry Pi, LiDAR, Camera, IMU
 * **Soft Skills:** Leadership, Collaboration, Problem-Solving, Communication, Adaptability, Project Management, Mentorship, Attention to Detail
+
 
 # Experience
 
@@ -32,6 +34,8 @@ _President ( Jul 2021 - May 2022 )_
 
 
 # Projects
+
+#### [Structure from Motion](./pages/StructureFromMotion/page.html)
 
 
 # Certifications
