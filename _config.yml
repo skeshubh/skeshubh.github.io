@@ -9,3 +9,4 @@ theme: jekyll-theme-minimal
 markdown: kramdown
 kramdown:
   math_engine: mathjax
+use_math: true
