@@ -7,5 +7,5 @@ description: Result-oriented Entry Level Robotics Engineer with a strong focus o
 show_downloads: false
 theme: jekyll-theme-minimal
 markdown: kramdown
-usemathjax: true
-use_math: true
+kramdown:
+  math_engine: mathjax
