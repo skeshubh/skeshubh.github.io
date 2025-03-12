@@ -1,3 +1,6 @@
+plugins:
+  - jekyll-mathjax
+
 title: Keshubh Sharma
 logo: /assets/profile.jpeg
 description: Result-oriented Entry Level Robotics Engineer with a strong focus on computer vision, robotics, and automation technologies.
