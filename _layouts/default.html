@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@2/es5/tex-mml-chtml.js">
+    </script>
+    
+    {% if page.use_math %}
+    {% include mathjax_support.html %}
+    {% endif %}
+  </head>
+  <body>
+    <div id="markdown-content"></div>
+
+    <script>
+        // Fetch the Markdown file and convert it to HTML
+        fetch('index.md')
+            .then(response => response.text())
+            .then(mdText => {
+                var converter = new showdown.Converter();
+                var html = converter.makeHtml(mdText);
+                document.getElementById('markdown-content').innerHTML = html;
+            })
+            .catch(err => console.error(err));
+    </script>
+</body>
+</html>
