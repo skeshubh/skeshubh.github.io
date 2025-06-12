@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio Details - DevFolio Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: DevFolio
+  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="/index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Keshubh Sharma</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Real Time Optimal Path Planning for Non-Holonomoc Robots</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+        <div class="portfolio-details-slider">
+          <img src="assets/img/robotics1/gazebo.gif" class="testimonial-img" alt="Visualization of BIT* algorithm">
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>Abstract</h2>
+              <p>
+                Path planning is the key aspect for performance of a mobile robot in any application. Creating a path around static
+                 obstacles is achievable since decades but moving around dynamic obstacles that present themselves on the planned path is a major
+                 challenge for modern applications in robotics. This project presents a solution combining sampling based algorithms AIT* &
+                 BIT* for path planning and Model Predictive Control for obstacle avoidance, and compare them to the already existing solutions
+                 in a virtual environment using simulation tools like RViz and Gazebo.
+              </p>
+
+              <h2>Methedology</h2>
+              <p>
+                I implemented advanced algorithms such as AIT* and BIT* for global path planning, combined with a Model Predictive Controller (MPC) 
+                for local path optimization. As a baseline, I compared performance against standard APF + RRT planners. This enhanced approach led 
+                to improved computational efficiency, reduced time complexity, and smoother navigation paths.
+              </p>
+
+              <h4>Batch Informed Trees (BIT*) Algorithm Overview</h4>
+              <p>
+                The key idea behind BIT* is to reduce the computational cost of RRT* by processing batches of nodes instead of one node at a time. 
+                This allows BIT* to explore the configuration space more efficiently and converge to a solution faster than RRT*. 
+              </p>
+              <p>
+                Additionally, the cost updates and pruning steps help to maintain an efficient search tree that does not waste computational 
+                resources exploring regions of the configuration space that are unlikely to lead to a solution.
+              </p>
+              <p> Here is a high-level overview of the BIT* algorithm:</p>
+              <ol>
+                <li> Initialize the search tree with the start node.</li>
+                <li> Sample a batch of nodes from the configuration space. These nodes are called ”waypoints”.</li>
+                <li> For each waypoint, attempt to connect it to the existing tree by finding the nearest node in the tree and creating a new 
+                     edge between the waypoint and the nearest node.</li>
+                <li> Once all the waypoints have been connected to the tree, perform a cost update for each node in the tree. The cost of a node 
+                     is the sum of the costs of the edges that connect it to the root node.</li>
+                <li> Prune the tree by removing any nodes whose cost is greater than a certain threshold.</li>
+                <li> Repeat steps 2-5 until the goal is reached or a certain time limit is exceeded.</li>
+                <li> If a path to the goal is found, return it. Otherwise, return failure.</li>
+              </ol>
+              <div>
+                  <img src="assets/img/robotics1/fig3.png" class="testimonial-img" alt="Visualization of BIT* algorithm">
+              </div>
+              <p></p>
+
+              <h4>Adaptively Informed Trees (AIT*) Algorithm Overview</h4>
+              <p>
+                Adaptively Informed Trees (AIT*) is a sampling-based motion planning algorithm that blends the strengths of A* and RRT*, making it 
+                well-suited for high-dimensional problems with multiple objectives. It intelligently biases its sampling based on a heuristic estimate 
+                of the remaining cost to the goal, similar to A*, which helps guide the search more efficiently toward the goal configuration.
+              </p>
+              <p>
+                In addition to goal-directed sampling, AIT* supports multi-objective optimization using a weighted sum approach, allowing users to 
+                prioritize different cost components. It also introduces a cost-to-go estimation technique to better evaluate the efficiency of extending 
+                paths, resulting in faster convergence and more effective exploration of the state space.
+              </p>
+              <p> Here is a high-level overview of the AIT* algorithm:</p>
+              <ol>
+                <li> Initialize a tree with the starting configuration as the root node.</li>
+                <li> Sample a random configuration in the state space and find the closest node in the tree to it.</li>
+                <li> Extend the tree towards the sampled configuration by generating a path from the closest node to the sampled configuration.</li>
+                <li> Calculate the cost of the path based on the multiple objectives, such as minimizing distance, maximizing clearance, or minimizing time.</li>
+                <li> Update the cost of all nodes along the path and rewire the tree to ensure optimality.</li>
+                <li> Repeat steps 2 to 5 until the goal configuration is reached or a certain termination condition is met.</li>
+                <li> If the goal configuration is reached, return the path from the root node to the goal configuration. Otherwise, return failure.</li>
+              </ol>
+              <div>
+                  <img src="assets/img/robotics1/fig5.png" class="testimonial-img" alt="Visualization of AIT* algorithm">
+              </div>
+              <p></p>
+
+              <h4>Non-Linear Model Predictive Control (NMPC) Algorithm Overview</h4>
+              <p>
+                NMPC is a complex and computationally intensive control strategy that involves predicting the future behavior of the system, optimizing 
+                control actions based on this prediction, and implementing the optimal actions over a finite prediction horizon.
+              </p>
+              <p>
+                NMPC is an effective approach for controlling non-linear systems with time-varying dynamics and constraints, and it is widely used in 
+                process control, robotics, and other advanced control applications.
+              </p>
+              <p>The following is a high-level algorithm overview of NMPC:</p>
+              <ol>
+                <li><b>System modeling: </b> Develop a mathematical model that describes the behavior of the system being controlled. This model should 
+                    be nonlinear and time-varying, accounting for any nonlinearities and dynamics present in the system.</li>
+                <li><b>Define control objectives: </b> Determine the control objectives, including the desired output and any constraints on the inputs
+                    and outputs.</li>
+                <li><b>Time horizon selection: </b> Select a time horizon over which to optimize the control actions. This time horizon is typically 
+                  divided into a finite number of time intervals or ”prediction horizons”.</li>
+                <li><b>Predict future system behavior: </b> Using the mathematical model, predict the future behavior of the system over the prediction
+                  horizons.</li>
+                <li><b>Optimization: </b> Determine the optimal control actions that achieve the desired output while satisfying the input and output 
+                  constraints, based on the predicted behavior of the system.</li>
+                <li><b>Implementation: </b> Implement the optimal control actions for the current time interval, and update the model and control 
+                  strategy for the next time interval.</li>
+                <li><b>Repeat: </b> Repeat steps 4-6 for each time interval in the prediction horizon, continuously updating the model and control 
+                  strategy as needed.</li>
+              </ol>
+              <div>
+                  <img src="assets/img/robotics1/mpc.gif" class="testimonial-img" alt="Visualization of AIT* algorithm">
+              </div>
+              <p></p>
+
+              <h2>Experimentation &amp; Results</h2>
+              <p>
+                To evaluate the effectiveness of our proposed planner (AIT*, BIT* with MPC), we conducted experiments in both a simplified 2D 
+                environment and a simulated warehouse setup. The robot was tasked with navigating from a user-defined start to goal point in a dynamic 
+                environment containing moving obstacles like other robots and untracked warehouse items. As a baseline, we used the RRT + APF planner 
+                and visualized path results using Matplotlib and Rviz. After testing in a toy 2D environment, we extended the simulation to Gazebo-based 
+                warehouse layouts to better assess real-world applicability.
+              </p>
+              <p>
+                We compared each planner using key performance metrics: percentage of dynamic obstacles detected, computational efficiency, energy consumption, 
+                time taken, path smoothness, and accuracy of optimal traversal. In challenging scenarios with increased obstacle density, AIT* and BIT* 
+                outperformed the baseline in terms of path optimization and fewer node explorations. Cost-to-go graphs showed that AIT* and BIT* efficiently 
+                reduced path cost after initial discovery of the goal, unlike RRT which kept costs static until the goal was found. Additionally, BIT* and AIT* 
+                required significantly fewer nodes to reach optimized paths, demonstrating better computational efficiency.
+              </p>
+
+              <div class="portfolio-details-slider swiper init-swiper">
+              <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 3000
+                },
+                "slidesPerView": "auto",
+                "navigation": {
+                  "nextEl": ".swiper-button-next",
+                  "prevEl": ".swiper-button-prev"
+                },
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                }
+              }
+            </script>
+            <div class="swiper-wrapper align-items-center">
+
+              <div class="swiper-slide">
+                <img src="assets/img/robotics1/ait_output.jpeg" alt="AIT* Output">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/robotics1/bit_output.png" alt="BIT* Output">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/robotics1/toy problem.jpg" alt="Toy Problem environment">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="assets/img/robotics1/warehouse.png" alt="Warehouse Problem environment">
+              </div>
+
+            </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+              </div>
+
+              <p>
+                Despite their strengths, these planners have limitations. AIT* is more computationally demanding, while BIT* requires significant memory and 
+                is sensitive to tuning parameters. The MPC component, though powerful, demands precise modeling and careful parameter adjustment, which can 
+                be time-consuming. In rare cases, if optimization offers conflicting path choices in consecutive steps, it may cause the robot to deviate or 
+                collide. Nonetheless, the proposed methods significantly advanced real-time path planning performance in dynamic, cluttered environments.
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong> Warehouse Robotics</li>
+                <li><strong>Technologies</strong> ROS2, Python, Gazebo</li>
+                <li><strong>Project date</strong> May, 2023</li>
+                <li><strong>Project Motivation</strong> Course Project</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">DevFolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
